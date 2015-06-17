@@ -49,6 +49,8 @@ Node.JS module to send GCM Push Notifications for both iOS &amp; Android
 
 `restricted_package_name`(string): Restricted_package_name, if not applicable it will not get sent.
 
+For more information on the properties of `notification` or the message, visit: [GCM Connection Server Reference](https://developers.google.com/cloud-messaging/server-ref)
+
 #Notification Payload - Properties
 `body`(string): Notification body text.
 
