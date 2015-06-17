@@ -1,0 +1,37 @@
+{
+  "name": "multi-gcm",
+  "version": "1.0.0",
+  "description": "Node.JS module to send GCM Push Notifications for Android & iOS",
+  "main": "./library/MultiGCM.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pavlospt/MultiGCM.git"
+  },
+  "keywords": [
+    "push",
+    "push",
+    "notifications",
+    "android",
+    "gcm",
+    "gcm",
+    "notifications",
+    "ios",
+    "android",
+    "gcm",
+    "ios",
+    "gcm"
+  ],
+  "author": "Pavlos-Petros Tournaris <p.tournaris@gmail.com> (http://about.me/pavlospt)",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/pavlospt/MultiGCM/issues"
+  },
+  "homepage": "https://github.com/pavlospt/MultiGCM",
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "request": "^2.58.0"
+  },
+  "engines": {
+    "node": ">=0.10.3"
+  }
+}
