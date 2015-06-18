@@ -30,6 +30,10 @@ MultiGCM.prototype.send = function(message,callback){
     };
 
     request(requestOptions,function(err,response,body){
+
+        if(err)
+            return callback(err);
+
         var resultObject = {};
 
         if(response.statusCode == 200){
