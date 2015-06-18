@@ -97,15 +97,25 @@ MultiGCM.prototype.send = function(message,callback){
                 }
 
                 if(resultObject.canonicalIdsPositions){
-                    resultObject.canonicalIdsPositions.forEach(function(index){
-                        resultObject.deletableTokens.push(message.registration_ids[index]);
-                    });
+                    if(message.registration_ids){
+                        resultObject.canonicalIdsPositions.forEach(function(index){
+                            resultObject.deletableTokens.push(message.registration_ids[index]);
+                        });
+                    }else{
+                        if(message.to)
+                            resultObject.deletableTokens.push(message.to);
+                    }
                 }
 
                 if(resultObject.deletablePositions){
-                    resultObject.deletablePositions.forEach(function(index){
-                        resultObject.deletableTokens.push(message.registration_ids[index]);
-                    });
+                    if(message.registration_ids){
+                        resultObject.deletablePositions.forEach(function(index){
+                            resultObject.deletableTokens.push(message.registration_ids[index]);
+                        });
+                    }else{
+                        if(message.to)
+                            resultObject.deletableTokens.push(message.to);
+                    }
                 }
 
             }

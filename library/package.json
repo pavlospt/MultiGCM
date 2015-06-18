@@ -1,6 +1,6 @@
 {
   "name": "multi-gcm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node.JS module to send GCM Push Notifications for Android & iOS",
   "main": "./library/MultiGCM.js",
   "repository": {
