@@ -6,7 +6,7 @@ Node.JS module to send GCM Push Notifications for both iOS &amp; Android
 `npm install -g multi-gcm` (Latest available version `1.0.2`)
 
 #How To Use
-    var gcm = require('./MultiGCM');
+    var gcm = require('multi-gcm');
     var MultiGCM = new gcm.MultiGCM('AIza...');
   
     var messageAndroid = new gcm.GCMMessage({
@@ -17,7 +17,7 @@ Node.JS module to send GCM Push Notifications for both iOS &amp; Android
       }
     });
   
-    MultiGCM.send(message,function(err,response){
+    MultiGCM.send(messageAndroid,function(err,response){
         if(err){
             console.error(err);
         }else{
