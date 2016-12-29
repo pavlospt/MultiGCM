@@ -6,25 +6,27 @@ Node.JS module to send GCM Push Notifications for both iOS &amp; Android
 `npm install -g multi-gcm` (Latest available version `1.0.2`)
 
 #How To Use
-    var gcm = require('multi-gcm');
-    var MultiGCM = new gcm.MultiGCM('AIza...');
-  
-    var messageAndroid = new gcm.GCMMessage({
-      registration_ids:['your_registration_ids'],
-      type: 'device type', //Android or iOS
-      data: {
-        'Your own payload.'
-      }
-    });
-  
-    MultiGCM.send(messageAndroid,function(err,response){
-        if(err){
-            console.error(err);
-        }else{
-            console.log(response); //Containing the custom result object of this Library
-            console.log(response.result); //Containing the JSON object response from GCM
-        }
-    });
+```js
+var gcm = require('multi-gcm');
+var MultiGCM = new gcm.MultiGCM('AIza...');
+
+var messageAndroid = new gcm.GCMMessage({
+  registration_ids:['your_registration_ids'],
+  type: 'device type', //Android or iOS
+  data: {
+    'Your own payload.'
+  }
+});
+
+MultiGCM.send(messageAndroid,function(err,response){
+    if(err){
+        console.error(err);
+    }else{
+        console.log(response); //Containing the custom result object of this Library
+        console.log(response.result); //Containing the JSON object response from GCM
+    }
+});
+```
     
 #Message Object - Properties
 `registration_ids`(array of Strings): Array containing the GCM Tokens to send the notifications.
